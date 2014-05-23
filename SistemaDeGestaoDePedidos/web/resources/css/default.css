@@ -1,0 +1,76 @@
+body {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;  
+    margin: 10px;
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    border-bottom: 1px solid #AFAFAF; 
+    font-size:  16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #D20005;
+}
+
+a:link, a:visited {
+  color: #045491;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+  color: #045491;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+.borda1x{
+    border: solid 1px #045491;
+}
+
+.borda2x{
+    border: solid 2px #045491;
+}
+
+.borda3x{
+    border: solid 3px #045491;
+}
+
+.borda4x{
+    border: solid 4px #045491;
+}
+
+.borda5x{
+    border: solid 5px #045491;
+}
+
+.borda6x{
+    border: solid 6px #045491;
+}
+
+.borda7x{
+    border: solid 7px #045491;
+}
+
+.borda8x{
+    border: solid 8px #045491;
+}
+
+.borda9x{
+    border: solid 9px #045491;
+}
+
+.borda10x{
+    border: solid 10px #045491;
+}
+
+
+.borda-redonda{
+    border-radius: 20px;
+}
+
+
