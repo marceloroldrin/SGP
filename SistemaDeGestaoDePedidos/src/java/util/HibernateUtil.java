@@ -22,23 +22,16 @@ import org.hibernate.service.ServiceRegistryBuilder;
 public class HibernateUtil {
 
     private static final SessionFactory sessionFactory;
+    private static SessionFactory Configuration;
 
     static {
         try {
-            // Create the SessionFactory from standard (hibernate.cfg.xml) 
-            // config file.
+            sessionFactory =  new Configuration().configure().buildSessionFactory();
 
-            ServiceRegistry serviceRegistry = new ServiceRegistryBuilder()
-                    .configure().buildServiceRegistry();
-            MetadataSources metadataSources = new MetadataSources(serviceRegistry);
-            metadataSources.addResource("Cliente.hbm.xml")
-                    .addAnnotatedClass(Cliente.class);
-            Metadata metadata = metadataSources.buildMetadata();
-            sessionFactory = metadata.buildSessionFactory();
-        } catch (Throwable ex) {
-            // Log the exception. 
-            System.err.println("Initial SessionFactory creation failed." + ex);
-            throw new ExceptionInInitializerError(ex);
+        } catch (Throwable b) {
+
+            System.out.println("Não deu \n" + b);
+            throw new ExceptionInInitializerError();
         }
     }
 
