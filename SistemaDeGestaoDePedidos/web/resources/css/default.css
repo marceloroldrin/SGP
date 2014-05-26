@@ -73,4 +73,16 @@ a:link:hover, a:visited:hover  {
     border-radius: 20px;
 }
 
+.separador{
+    border-top: solid #045491 1px;
+    text-align: right;
+    padding-top: 2px;
+    
+}
+
+.separador *{
+    margin: 2px;
+}
+
+
 

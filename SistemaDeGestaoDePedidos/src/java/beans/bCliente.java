@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package beans;
 
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -18,9 +18,20 @@ import java.io.Serializable;
 @SessionScoped
 public class bCliente implements Serializable {
 
-    
-    
+    GregorianCalendar calendar;
+
     public bCliente() {
+        this.calendar = new GregorianCalendar();
+    }
+
+    public GregorianCalendar getCalendar() {
+        return calendar;
+    }
+
+    public void setCalendar(GregorianCalendar calendar) {
+        this.calendar = calendar;
     }
     
+    
+
 }

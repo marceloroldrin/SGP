@@ -8,8 +8,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>
-        <h:outputStylesheet name="./css/bootstrap-responsive.css"/>
         <h:outputStylesheet name="./css/bootstrap.css"/>
+        <h:outputStylesheet name="./css/bootstrap-responsive.css"/>
         <h:outputScript name="./js/bootstrap.mim.js"/>
 
         <title>Sistema de Gestão de Pedidos</title>
@@ -18,18 +18,15 @@
 
     <h:body>
         <div class="container-fluid">
-            <div class="row-fluid alert-danger">
+            <div class="row-fluid">
                 <div>
-                    <ui:insert name="top">Top</ui:insert>
-                </div>
-            </div>
-            <div class="row-fluid alert-success">
-                <div>
-                    <ui:insert name="conteudo">conteudo</ui:insert>
+                    <ui:include src="menu.xhtml"></ui:include>
                 </div>
             </div>
             <div class="row-fluid">
-                <ui:include src="menuInferior.xhtml"></ui:include>
+                <div class="offset2 span8" >
+                    <ui:insert name="conteudo">conteudo</ui:insert>
+                </div>
             </div>
         </div>
     </h:body>

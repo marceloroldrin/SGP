@@ -4,20 +4,30 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                xmlns:mdjnm="http://mojarra.dev.java.net/mojarra_ext">
+                xmlns:mdjnm="http://mojarra.dev.java.net/mojarra_ext"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:define name="conteudo">
         <h:form class="form-actions borda2x borda-redonda" title="Cadastro">
-            <h:panelGrid columns="2">
-                <h:outputLabel for="nome" value="Nome:"/>
-                <h:inputText id="nome" class="focused" />
-
-                <h:outputLabel for="nome" value="Idade:"/>
-                <h:inputText id="idade" class="text-success" />
-            </h:panelGrid>
-            <h:commandButton class="btn-success borda-redonda" value="Salvar" />
-            <h:commandButton class="btn-danger borda-redonda" value="Cancelar" type="reset"/>
+            <h:outputLabel for="nome" value="Nome:"/>
+            <h:inputText id="nome" class="span10" />
+            <h:outputLabel for="nome" value="Idade:"/>
+            <h:inputText id="idade" class="span2" />
+            <h:outputLabel for="popup" value="Data(IDA):" />
+            <p:calendar id="popup" effect="fade" value="#{bCliente.calendar.time}" mindate="#{bCliente.calendar.time}"/>
+            <h:outputLabel for="popup2" value="Data(VOLTA):" />
+            <p:calendar id="popup2" effect="fade" mindate="#{bCliente.calendar.time}"/>
+            <f:ajax execute="popup" render="popup2" event="onclik"/>
+            <div class="separador">
+                <h:commandButton class="btn-success" value="Salvar" />
+                <h:commandButton class="btn-danger" value="Cancelar" type="reset"/>
+            </div>
         </h:form>
+        <c:forEach begin="0" end="100">
+            <br />
+        </c:forEach>
     </ui:define>
 
 </ui:composition>
